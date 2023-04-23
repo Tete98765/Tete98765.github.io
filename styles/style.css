@@ -20,10 +20,12 @@ li {
     list-style: none;
 }
 
-/*@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px){
     html{
-        min-width: none;}
-}*/
+        min-width: none;
+        overflow-x: hidden;
+    }
+}
 
 /******************************/
 
@@ -81,26 +83,30 @@ li {
     color: #fff;
 }
 
-/*@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #navigation {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      text-align: center;
-      overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
-  
+        
+    .nav-title {
+        grid-row: unset;
+        grid-column: unset;
+        justify-self: unset;
+        padding-left: unset;
+        margin-bottom: 20px;
+    }
+        
     .navbar {
-      display: block;
-      width: 100%;
-      padding: 10px 0;
-      text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+        padding-right: unset;
     }
-  
-    .navbar li {
-      display: inline-block;
-      margin: 10px 0;
-    }
-}*/
+}
   
 /**************************************************/
 #home{
@@ -134,25 +140,28 @@ li {
     margin-top: 15px;
 }
 
-/*@media (max-width: 768px) {
+@media (max-width: 768px) {
     #home {
-      padding-bottom: 150px;
-      height: auto;
+        padding-top: 300px;
+        padding-bottom: 70px;
+        height: auto;
+        width: 100%;
+        padding-left: 50px;
     }
-    
+
     #home img {
-      width: 200px;
-      height: 200px;
+        width: 200px;
+        height: 200px;
     }
     
     #home .wrap {
-      width: 200px;
+        width: 200px;
     }
     
     #home .name_home, #home .desc {
-      margin-top: 10px;
+        margin-top: 10px;
     }
-  }*/
+}
   
 
 /************************************************************/
@@ -266,6 +275,52 @@ li {
     transform: scale(0.95);
 }
 
+@media only screen and (max-width: 768px) {
+    #education {
+        width: 100%;
+        padding-left: 50px;
+    }
+    .education-grid {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+        grid-gap: 0.5rem;
+        padding-right: 70px;
+      }
+      
+    .education-grid img {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    }
+      
+    .card {
+        position: relative;
+    }
+    
+    .card .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .card:hover .text {
+        opacity: 1;
+    }
+      
+    .card img {
+        filter: none;
+        transform: none;
+    }
+}
+  
+
 /***************************************************************************/
 #skills{
     width: 100%;
@@ -275,6 +330,8 @@ li {
     padding: 20px;
     padding-bottom: 100px;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .programming{
@@ -293,8 +350,6 @@ li {
 
 .skills-heading {
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100px;
 }
 
@@ -317,12 +372,7 @@ li {
 .motto {
     margin-top: 20px;
 }
-
 /*********************************************************************************************/
-/*#work {
-    margin: 20px;
-}*/
-
 #work{
     background-color: #D2691E;
     display: flex;
@@ -351,6 +401,18 @@ li {
     text-align: justify;
 }
 
+@media only screen and (max-width: 768px) {
+    #work {
+        margin-top: 30px;
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    .work-grid {
+        padding-right: 70px;
+    }
+}
+
 /**************************************/
 .contact-heading {
     display: flex;
@@ -366,7 +428,7 @@ li {
 .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
   
 .form {
@@ -485,6 +547,13 @@ button:hover {
 .social-media img:hover {
     transform: scale(1.5);
 }
+
+@media only screen and (max-width: 768px) {
+    .form {
+        padding-left: 30px;
+    }
+}
+
 /*********************************************************************/
 footer {
 	display: block;
@@ -505,5 +574,14 @@ footer p a:hover {
 footer a {
     color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        padding-left: 50px;
+    }
+}
+  
+  
   
   
