@@ -49,6 +49,16 @@ li {
     justify-self: start;
     padding-left: 10px;
 }
+
+.nav-title h1 {
+    color:#fff;
+}
+
+.nav-title h1:hover {
+    background-color: #D2691E;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
  /*navbar menu*/
   
 .navbar {
